@@ -26,15 +26,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Fontes: Playfair Display para o luxo e Jost para legibilidade moderna -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --accent-gold: #D4AF37;        /* Dourado Metálico Sofisticado */
-            --light-gold: #F2D472;         /* Brilho Dourado */
-            --bg-dark: #050A14;           /* Azul Noturno Profundo */
-            --card-dark: #0D1424;         /* Azul um pouco mais claro para profundidade */
-            --text-main: #E5E7EB;         /* Cinza claro para leitura */
+            --accent-gold: #D4AF37;
+            --light-gold: #F2D472;
+            --bg-dark: #050A14;
+            --card-dark: #0D1424;
+            --text-main: #E5E7EB;
         }
 
         body {
@@ -43,13 +42,11 @@
             background-color: var(--bg-dark);
         }
 
-        /* Título principal mantém o estilo serifado para contraste de luxo */
         h1 {
             font-family: 'Playfair Display', serif;
             color: #FFFFFF;
         }
 
-        /* Títulos de seção */
         .section-title {
             font-family: 'Jost', sans-serif;
             font-weight: 600;
@@ -60,7 +57,7 @@
 
         .cta-gold {
             background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
-            color: #050A14; /* Texto escuro para alto luxo e legibilidade */
+            color: #050A14;
             transition: all 0.3s ease;
             box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.4);
             font-weight: 700;
@@ -87,7 +84,6 @@
             transition: border 0.3s ease;
         }
 
-        /* Estilos específicos da calculadora */
         .calc-container {
             border: 1px solid rgba(212, 175, 55, 0.2);
             background: linear-gradient(145deg, #0D1424 0%, #050A14 100%);
@@ -115,7 +111,6 @@
             background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
         }
 
-        /* Animação do botão de "Ligado" */
         @keyframes pulse-gold {
             0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
             70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(212, 175, 55, 0); }
@@ -134,7 +129,6 @@
 </head>
 <body class="antialiased overflow-x-hidden">
 
-    <!-- Efeitos de Brilho de Fundo -->
     <div class="glow-effect top-[-100px] left-[-100px]"></div>
     <div class="glow-effect bottom-[10%] right-[-100px]"></div>
 
@@ -170,7 +164,7 @@
         </div>
     </section>
 
-    <!-- Calculadora de Escala (Simulador Atualizado) -->
+    <!-- Calculadora de Escala -->
     <section class="py-12 px-4 relative">
         <div class="max-w-5xl mx-auto">
             <div class="calc-container p-8 md:p-12 rounded-[40px] relative shadow-2xl">
@@ -180,7 +174,6 @@
                 </div>
 
                 <div class="grid lg:grid-cols-3 gap-8">
-                    <!-- Coluna 1: Entradas -->
                     <div class="space-y-6 lg:border-r lg:border-white/5 lg:pr-8">
                         <p class="text-[14px] tracking-wide text-slate-400 font-normal mb-4 leading-relaxed uppercase">
                             <span class="text-[#D4AF37]">PREENCHA</span> SEUS DADOS ABAIXO COM SEUS NÚMEROS E VEJA QUANTO DINHEIRO VOCÊ ESTÁ DEIXANDO NA MESA
@@ -195,7 +188,6 @@
                         </div>
                     </div>
 
-                    <!-- Coluna 2: Comparativo Dinâmico -->
                     <div class="space-y-6 flex flex-col justify-center">
                         <div class="result-box p-6 rounded-2xl">
                             <p class="text-[9px] uppercase tracking-widest text-slate-500 mb-1">Faturamento Atendimento (Mensal)</p>
@@ -210,11 +202,7 @@
                         </div>
                     </div>
 
-                    <!-- Coluna 3: A Perda -->
                     <div class="bg-black/40 p-8 rounded-3xl border border-[#D4AF37]/30 text-center flex flex-col justify-center relative overflow-hidden">
-                        <div class="absolute top-0 right-0 p-2 opacity-10">
-                            <svg class="w-20 h-20 text-[#D4AF37]" fill="currentColor" viewBox="0 0 20 20"><path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.363.242.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"></path><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.184a4.535 4.535 0 00-1.676.662C6.602 13.234 6 14.009 6 15c0 .99.602 1.765 1.324 2.246A4.535 2.305 0 009 17.908V19a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 17.766 14 16.991 14 16c0-.99-.602 1.765-1.324-2.246A4.535 4.535 0 0011 13.092v-1.184a4.535 4.535 0 001.676-.662C13.398 10.766 14 9.991 14 9c0-.99-.602-1.765-1.324-2.246A4.535 2.305 0 0011 6.092V5z" clip-rule="evenodd"></path></svg>
-                        </div>
                         <p class="text-[10px] uppercase tracking-[0.3em] text-slate-500 mb-2">Lucro que você deixa na mesa (Anual)</p>
                         <div class="text-3xl md:text-4xl font-serif text-[#D4AF37] mb-4">
                             R$ <span id="lost_annual">0,00</span>
@@ -228,8 +216,6 @@
         </div>
     </section>
 
-    <div class="section-divider max-w-5xl mx-auto my-12"></div>
-
     <!-- Segmentação -->
     <section class="py-20 px-4">
         <div class="max-w-5xl mx-auto text-center md:text-left">
@@ -237,7 +223,6 @@
                 Para quem é o Campo de Batalha Gratuito . <span class="text-[#D4AF37]">Caverna ao VIVO</span>?
             </h2>
             <div class="grid md:grid-cols-2 gap-8 text-left">
-                <!-- Coluna Positiva -->
                 <div class="card-dark-elegant p-10 rounded-3xl border-l-4 border-l-[#D4AF37]">
                     <h3 class="text-lg font-bold mb-8 flex items-center text-white uppercase tracking-wider">
                         <span class="mr-3 text-[#D4AF37]">✓</span> É para você que:
@@ -248,7 +233,6 @@
                         <li>• Deseja aumentar o faturamento sem ficar presa em uma planilha de horas cansativas no digital.</li>
                     </ul>
                 </div>
-                <!-- Coluna Negativa -->
                 <div class="card-dark-elegant p-10 rounded-3xl border border-white/10 border-l-4 border-l-rose-500">
                     <h3 class="text-lg font-bold mb-8 flex items-center text-slate-300 uppercase tracking-wider">
                         <span class="mr-3 text-rose-500 font-black">✕</span> NÃO é para você se:
@@ -263,7 +247,7 @@
         </div>
     </section>
 
-    <!-- O que vamos desvendar -->
+    <!-- Entrega -->
     <section class="py-24 px-4 bg-[#D4AF37]/5 backdrop-blur-sm border-y border-[#D4AF37]/10">
         <div class="max-w-4xl mx-auto">
             <h2 class="section-title text-2xl md:text-3xl text-center mb-16">O que vamos desvendar:</h2>
@@ -298,14 +282,13 @@
         </div>
     </section>
 
-    <!-- SOBRE MIM (JADE TORRES) -->
+    <!-- Sobre Mim -->
     <section class="py-24 px-4 relative overflow-hidden">
         <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-16">
             <div class="w-64 h-80 md:w-80 md:h-[450px] flex-shrink-0 bg-gray-900 rounded-[40px] border border-[#D4AF37]/20 relative overflow-hidden group transition-all duration-700">
                 <img src="https://lh3.googleusercontent.com/u/0/d/1eV3eoJTM6cD43MZ7lDy_zL_VPlnP0tlV"
                      alt="Jade Torres"
                      class="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700">
-               
                 <div class="absolute inset-0 bg-gradient-to-t from-[#D4AF37]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
            
@@ -336,19 +319,18 @@
                 Cadastre-se 1 única vez e tenha acesso a todas as edições por 1 ano
             </p>
 
-            <!-- BÔNUS EXCLUSIVOS -->
             <div class="mb-12 grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
                 <div class="bg-[#D4AF37]/5 border border-[#D4AF37]/30 p-5 rounded-2xl backdrop-blur-sm">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-[#D4AF37] text-xl">✦</span>
-                        <h4 class="text-[10px] uppercase tracking-dot tracking-[0.2em] font-bold text-white">Bónus 01</h4>
+                        <h4 class="text-[10px] uppercase tracking-[0.2em] font-bold text-white">Bónus 01</h4>
                     </div>
                     <p class="text-sm text-slate-300 font-light">Sessão exclusiva de <span class="text-[#D4AF37] font-medium">tira-dúvidas ao vivo</span> com a mentora ao final do campo de batalha.</p>
                 </div>
                 <div class="bg-[#D4AF37]/5 border border-[#D4AF37]/30 p-5 rounded-2xl backdrop-blur-sm">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-[#D4AF37] text-xl">✦</span>
-                        <h4 class="text-[10px] uppercase tracking-dot tracking-[0.2em] font-bold text-white">Bónus 02</h4>
+                        <h4 class="text-[10px] uppercase tracking-[0.2em] font-bold text-white">Bónus 02</h4>
                     </div>
                     <p class="text-sm text-slate-300 font-light">Acesso a <span class="text-[#D4AF37] font-medium">materiais de apoio</span> surpresas da aula.</p>
                 </div>
@@ -375,10 +357,13 @@
     </section>
 
     <footer class="py-16 text-center border-t border-white/5">
-        <p class="text-slate-600 text-[10px] tracking-[0.3em] uppercase text-balance">&copy; 2026 • Caverna das Guerreiras • Todos os direitos reservados</p>
+        <p class="text-slate-600 text-[10px] tracking-[0.3em] uppercase">&copy; 2026 • Caverna das Guerreiras • Todos os direitos reservados</p>
     </footer>
 
     <script>
+        // CONFIGURAÇÃO DA PÁGINA DE OBRIGADO - ATUALIZADA POR GEMINI
+        const URL_PAGINA_OBRIGADO = "https://jadettorress-caverna.github.io/whokshopcaverna/obrigado.html";
+
         const inClients = document.getElementById('current_clients');
         const inPrice = document.getElementById('current_price');
        
@@ -410,18 +395,15 @@
         inPrice.addEventListener('input', updateCalc);
         window.onload = updateCalc;
 
-        // Lógica de envio integrada ao Make.com
         document.getElementById('leadForm').addEventListener('submit', async function(e) {
             e.preventDefault();
-            
+           
             const btn = document.getElementById('submitBtn');
             const originalText = btn.innerHTML;
-            
-            // Estado visual de carregamento
+           
             btn.innerHTML = 'Processando sua vaga...';
             btn.disabled = true;
 
-            // Coleta dos dados do formulário
             const formData = {
                 nome: document.getElementById('name').value,
                 email: document.getElementById('email').value,
@@ -439,27 +421,26 @@
             }
 
             try {
-                // ENVIO PARA O WEBHOOK DO MAKE.COM
+                // Envio para o Webhook (Make.com)
                 const response = await fetch('https://hook.us1.make.com/67szg4bg8p1j7q7smc98edql2zeagpuf', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(formData)
                 });
 
-                if (response.ok) {
-                    // REDIRECIONAMENTO PARA PÁGINA DE OBRIGADO
-                    // Se o seu arquivo no GitHub se chama obrigado.html, o redirecionamento deve ser para ele.
-                    window.location.href = 'obrigado.html';
-                } else {
-                    alert('Houve um pequeno erro. Por favor, tente novamente em instantes.');
-                }
+                // Independentemente de o Webhook responder OK ou Erro, redirecionamos para a Página de Obrigado
+                // Isso garante que o usuário finalize a experiência de cadastro
+                window.location.href = URL_PAGINA_OBRIGADO;
+
             } catch (error) {
-                console.error('Erro no envio:', error);
-                // Caso o envio falhe mas você queira que ela vá para a página de obrigado mesmo assim:
-                window.location.href = 'obrigado.html';
+                console.error("Erro no envio, mas redirecionando:", error);
+                window.location.href = URL_PAGINA_OBRIGADO;
             } finally {
-                btn.innerHTML = originalText;
-                btn.disabled = false;
+                // Em caso de erro muito grave que impeça o redirect, o botão volta ao normal
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                }, 3000);
             }
         });
     </script>
